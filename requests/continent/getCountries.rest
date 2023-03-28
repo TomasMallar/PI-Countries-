@@ -1,0 +1,25 @@
+@baseUrl = http://localhost:5000/continent
+
+GET {{baseUrl}}/Africa HTTP/1.1
+
+###
+GET {{baseUrl}}/Europe HTTP/1.1
+
+###
+GET {{baseUrl}}/Asia HTTP/1.1
+
+###
+GET {{baseUrl}}/South America HTTP/1.1
+
+###
+GET {{baseUrl}}/North America HTTP/1.1
+
+###
+GET {{baseUrl}}/Oceania HTTP/1.1
+
+###
+GET {{baseUrl}}/Antarctica HTTP/1.1
+
+
+###
+GET {{baseUrl}}/nose HTTP/1.1

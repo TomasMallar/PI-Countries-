@@ -1,0 +1,20 @@
+@baseUrl = http://localhost:5000/countries
+
+GET {{baseUrl}}/ecu HTTP/1.1
+
+###
+GET {{baseUrl}}/ata HTTP/1.1
+
+###
+GET {{baseUrl}}/per HTTP/1.1
+
+# CODIGOS ERRONEOS
+###
+GET {{baseUrl}}/idk HTTP/1.1
+
+###
+GET {{baseUrl}}/345 HTTP/1.1
+
+
+### se convierte en getAll
+GET {{baseUrl}}/ HTTP/1.1

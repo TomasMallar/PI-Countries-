@@ -1,0 +1,21 @@
+@baseUrl = http://localhost:5000/countries
+# PETICIONES CORRECTAS
+GET {{baseUrl}} HTTP/1.1
+
+###
+GET {{baseUrl}}?name=ecu HTTP/1.1
+
+###
+GET {{baseUrl}}?name=pol HTTP/1.1
+
+
+###
+GET {{baseUrl}}?name=us HTTP/1.1
+
+# PETICIONES ERRÓNEAS
+###
+GET {{baseUrl}}?name=123 HTTP/1.1
+
+
+### se transforma en un get all too
+GET {{baseUrl}}?name= HTTP/1.1

@@ -1,0 +1,121 @@
+@baseUrl = http://localhost:5000/activity
+
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+      "nombre": "Buceo",
+      "descripcion": "Se realizará esta actividad por las fiestas decembrinas",
+      "dificultad": "4",
+      "duracion": "2.5",
+      "temporada": "otoño",
+      "paises": ["ecu", "per", "ata"]
+}
+
+###
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+      "nombre": "kayak",
+      "dificultad": "3",
+      "descripcion": "Breve descripcion",
+      "duracion": "12/01/2021 24/01/2021",
+      "temporada": "verano",
+      "paises": ["ecu", "ata", "tkm", "sau"]
+}
+
+###
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+      "nombre": "Cabalgata",
+      "dificultad": "4",
+      "descripcion": "Hola"
+      "duracion": "12/01/2021 24/01/2021",
+      "temporada": "verano",
+      "paises": ["mne", "rwa", "sgp", "moz", "fin", "gum", "irn", "ata"]
+}
+
+###
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+      "nombre": "Canopy",
+      "dificultad": "5",
+      "duracion": "01/02/2022 24/01/2021",
+      "temporada": "verano",
+      "paises": ["twn", "srb", "hmd", "esp"]
+}
+
+# PETICIONES ERRONEAS
+###
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+      "nombre": "Erronea",
+      "dificultad": "4",
+      "duracion": 200,
+      "temporada": "verano",
+      "paises": ["ecu", "per", "12"]
+}
+
+###
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+      "nombre": "Erronea",
+      "duracion": "No se",
+      "temporada": "verano",
+      "paises": ["ecu", "per", "12"]
+}
+
+###
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+      "nombre": "Erronea",
+      "dificultad": "4",
+      "duracion": 100,
+      "temporada": "Siempre",
+      "paises": ["ecu", "per", "12"]
+}
+
+###
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+      "nombre": "Erronea",
+      "duracion": 50,
+      "temporada": "verano",
+      "paises": "ecu"
+}
+
+###
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+      "duracion": 50,
+      "temporada": "verano",
+      "paises": "ecu"
+}
+
+###
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+      "nombre": "Natacion",
+      "descripcion": "Breve descripcion",
+      "dificultad": "4",
+      "duracion": 30,
+      "temporada": "otoño",
+      "paises": ["", "1", "12"]
+}
